@@ -1,0 +1,14 @@
+- Chức năng của Admin: 
+Quản lý bài viết:đăng bài, sửa, xóa(Có phân loại bài viết theo Món ăn(Bánh mì, Bánh ngọt, Bữa sáng, Đồ uống, Khai vị) và theo Loại(công thức, mẹo, blog))
+Quản lý người dùng: chặn/bỏ chặn
+Quản lý bình luận: tìm kiếm (theo tên người dùng, bài viết)/xóa
+- Chức Năng của Người dùng:
+Trang chủ:
++ Slide chứa 4 ảnh giới thiệu về trang web, tự động chạy
++ Lọc bài viết theo danh mục Món ăn và Loại trong bài viết
++ Hiển thị các bài viết mới nhất
++ Hiển thị bài viết nổi bật (dựa theo số lượt bình luận)
++ Thanh tìm kiếm (theo từ khóa tên bài viết)
+Trang chi tiết công thức(chức thông tin bài viết, bình luận, nút yêu thích)
+Thêm yêu thích, xóa yêu thích
+Bình luận vào bài viết

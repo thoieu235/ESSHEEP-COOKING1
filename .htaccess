@@ -1,0 +1,36 @@
+RewriteEngine On
+Options -Indexes
+
+# Xử lý các đường dẫn URL đẹp
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Xử lý URL cho bài viết
+RewriteRule ^post/([a-zA-Z0-9_-]+)$ post.php?slug=$1 [QSA,L]
+
+# Xử lý URL cho danh mục
+RewriteRule ^category/([a-zA-Z0-9_-]+)$ search.php?category=$1 [QSA,L]
+
+# Xử lý URL cho loại bài viết
+RewriteRule ^type/([a-zA-Z0-9_-]+)$ search.php?type=$1 [QSA,L]
+
+# Bảo vệ các file quan trọng
+<FilesMatch "(\.htaccess|\.env|\.gitignore|config\.php|database\.php)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Xử lý lỗi 404
+ErrorDocument 404 /EsheepKitchen/404.php
+
+# Xử lý lỗi 500
+ErrorDocument 500 /EsheepKitchen/500.php
+
+# Thiết lập charset
+AddDefaultCharset UTF-8
+
+# PHP cấu hình
+php_value upload_max_filesize 10M
+php_value post_max_size 10M
+php_value max_execution_time 300
+php_value max_input_time 300 
